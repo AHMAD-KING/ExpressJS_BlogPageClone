@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> welcome to a facebook clone 
+    </h1>
+    <table>
+        <tr>
+            <th><%= locals.id || "guest" %>: What do you like to post? </th>
+            <th>
+                <form action="/userPosts" method="POST">
+                    <!-- we send it to the page userPosts which then the server handles and adds the information to the page viewPosts -->
+                    <textarea name="name" id="name" placeholder="Your text"></textarea>
+                    <input type="submit" value="submit">
+                </form>
+            </th>
+        </tr>
+        <tr>
+            <td>View all posts:</td>
+            <td> 
+                <form method="get" action="/userPosts">
+                    <input type="submit" value="Go">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Delete my Post:</td>
+            <td> 
+                <form method="POST" action="/userPosts/delete">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" value="delete">
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
