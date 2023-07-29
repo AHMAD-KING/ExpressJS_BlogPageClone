@@ -1,4 +1,4 @@
-# ExpressJS_FacebookClone
+# ExpressJS_BlogPageClone
 Creating a Facebook clone in which the user can post, view and delete his posts (using local memory, without using any databases)
 
 Every user has a random id that distinguishes him from the others to keep track of his posts:
